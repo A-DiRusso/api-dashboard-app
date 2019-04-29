@@ -6,9 +6,9 @@ export default class Weather extends Component {
       super(props);
       this.state = {
         quote: '',
-        city: '',
-          sky: '',
-          temp: ''
+        city: 'Atlanta',
+          sky: 'clear sky',
+          temp: '86'
         
       }
   }
@@ -18,25 +18,26 @@ export default class Weather extends Component {
   render() {
     return (
       <div>
-        <h3>Weather And A Ron Swanson Quote</h3>
-        <div>{this.state.city}</div>
-        <div>{this.state.sky}</div>
-        <div>{this.state.temp}</div>
+        <h2>Weather And A Ron Swanson Quote</h2>
+        <div>Location: {this.state.city}</div>
+        <div>Conditions: {this.state.sky}</div>
+        <div>Temp: {this.state.temp}</div>
+        <h2>Ron Swanson Quote:</h2>
         <div>{this.state.quote}</div>
       </div>
     )
   }
   _getSwansonQuote = async () => {
-      const zipcode = 30084;
-      const weatherApiKey = "03458bfd7dc0cbf327a517b3f034df4d";
-      const response = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?zip=${zipcode},us&appid=${weatherApiKey}`)
+    //   const zipcode = 30084;
+    //   const weatherApiKey = "03458bfd7dc0cbf327a517b3f034df4d";
+    //   const response = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?zip=${zipcode},us&appid=${weatherApiKey}`)
       const quoteResponse = await axios.get('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
-      console.log(response.data.list[0].main.temp)
+    //   console.log(response.data.list[0].main.temp)
       this.setState({
           quote: quoteResponse.data,
-          city: response.data.city.name,
-          sky: response.data.list[0].weather[0].description,
-          temp: response.data.list[0].main.temp
+        //   city: response.data.city.name,
+        //   sky: response.data.list[0].weather[0].description,
+        //   temp: Math.floor(((response.data.list[0].main.temp - 273) * 9/5) + 32)
           
     
 
