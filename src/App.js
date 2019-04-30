@@ -5,6 +5,7 @@ import Weather from './Weather';
 import Fortune from './Fortune';
 import Joke from './Joke';
 import Movie from './Movie'
+import GoT from './GoT';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Fortune />
         <Joke />
         <Movie />
+        <GoT />
       </header>
     </div>
   );
