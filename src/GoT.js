@@ -19,7 +19,7 @@ export default class GoT extends Component {
         <div>
             <h2>GAME TIME</h2>
             <ul>
-            {this.state.characters.map((c, i) => <li key={i}>{c}</li>)}
+            <li>{this.state.characters}</li>
             
             </ul>
         </div>
@@ -28,9 +28,9 @@ export default class GoT extends Component {
     _getCharactersForPage = async () => {
         const response = await axios.get(`https://www.anapioficeandfire.com/api/characters?page=${this.state.pageNumber}&pageSize=10`)
             console.log(response.data[1].name)
-            // this.setState({
-            //     characters: response.data[1].name
-            // })
+            this.setState({
+                characters: response.data[1].name
+            })
             
     }
 }
