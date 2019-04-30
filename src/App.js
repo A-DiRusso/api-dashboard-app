@@ -4,6 +4,7 @@ import './App.css';
 import Weather from './Weather';
 import Fortune from './Fortune';
 import Joke from './Joke';
+import Movie from './Movie'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Weather />
         <Fortune />
         <Joke />
+        <Movie />
       </header>
     </div>
   );

@@ -7,8 +7,8 @@ export default class Weather extends Component {
       this.state = {
         quote: '',
         city: 'Atlanta',
-          sky: 'clear sky',
-          temp: '86'
+          sky: ';sctattered clouds',
+          temp: '78'
         
       }
   }
@@ -42,5 +42,10 @@ export default class Weather extends Component {
     
 
       })
+      
   }
+
+
+                
+  
 }
