@@ -13,8 +13,11 @@ export default class Joke extends Component {
   }
 
   render() {
+      const style = {
+          background: '#82FFC4'
+      }
     return (
-      <div>
+      <div style={style}>
           <h3>Dad Joke:</h3>
           {this.state.joke ? <div>{this.state.joke}</div> : null }
        

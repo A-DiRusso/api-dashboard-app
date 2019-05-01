@@ -16,8 +16,11 @@ export default class Movie extends Component {
 //   }
 
   render() {
+    const style = {
+        background: '#FF535E'
+    }
     return (
-      <div>
+      <div style={style}>
         <h2>A Movie With Some Stars at A Thearter at A Time</h2>
         <div>{this.state.movie}</div>
         <div>{this.state.cast}</div>

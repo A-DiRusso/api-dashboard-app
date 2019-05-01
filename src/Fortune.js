@@ -13,8 +13,11 @@ export default class Fortune extends Component {
   }
 
   render() {
+      const style = {
+          background: "#0E8D99"
+      }
     return (
-      <div>
+      <div style={style}>
         <h2>Not Ron Swanson Quote:</h2>
         <div>{this.state.fortune}</div>
       </div>

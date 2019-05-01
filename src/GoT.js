@@ -15,8 +15,12 @@ export default class GoT extends Component {
     }
 
     render() {
+        const style = {
+            background: '#CC167D',
+        
+        }
         return (
-        <div>
+        <div style={style}>
             <h2>GAME TIME</h2>
             <ul>
             <li>{this.state.characters}</li>

@@ -16,8 +16,12 @@ export default class Weather extends Component {
       this._getSwansonQuote();
   }
   render() {
+      const style = {
+          background: "#54C1CC"
+      }
     return (
-      <div>
+  
+      <div style={style}>
         <h2>Weather And A Ron Swanson Quote</h2>
         <div>Location: {this.state.city}</div>
         <div>Conditions: {this.state.sky}</div>
